@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10px;
+    background-color: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#imagem {
+    background-image: url('../img/forca1.png');
+    background-repeat: no-repeat;
+    width: 234px;
+    height: 272px;
+}
+
+#palavra-secreta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+
+.letras {
+    width: 35px;
+    text-align: center;
+    border-bottom: 2px solid #0A3871;
+    color: #0A3871;
+    font-weight: 700;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.letrasEspaco {
+    width: 16px;
+    text-align: center;
+    color: #0A3871;
+    font-weight: 700;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#teclado {
+    margin-top: 30px;
+}
+
+.teclas button {
+    width: 68px;
+    height: 68px;
+    margin: 2px 2px 7px 2px;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px #696969;
+    border-radius: 5px;
+    border: 1px solid #696969;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.teclas button:disabled {
+    cursor: not-allowed;
+}
+
+.teclas button:hover {
+    transform: scale(1.1);
+}
+
+/* Estilização do modal de adicionar palavra */
+
+#fade,
+#modal {
+    opacity: 1;
+    transition: .5s;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+#modal {
+    padding: 50px;
+    background-color: rgba(243, 245, 252, 0.897);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 80vh;
+    height: auto;
+    border-radius: 20px;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+}
+
+#modal h1 {
+    font-size: 1.5em;
+}
+
+#modal input,
+#modal button {
+    padding: 20px;
+    margin-bottom: 1em 0;
+    width: 100%;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+
+
+#modal input {
+    border: 0.2px solid rgba(0, 0, 0, 0.384);
+    margin-top: 2%;
+}
+
+#modal button {
+    background-color: #F3F5FC;
+    border: 1px solid #696969;
+    cursor: pointer;
+    opacity: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    color: #0A3871;
+    margin-top: 2%;
+}
+
+#modal button:hover {
+    opacity: .9;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    top: 0;
+}
